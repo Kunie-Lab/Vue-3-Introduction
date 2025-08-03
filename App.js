@@ -1,6 +1,8 @@
 import {defineComponent, ref} from "vue";
+import GroceryListItem from './GroceryListItem.js';
 
 export default defineComponent({
+  components: { GroceryListItem },
   setup() {
     const groceryList = ref([
       { id: 0, text: 'Vegetables' },
@@ -14,7 +16,7 @@ export default defineComponent({
   },
   template: `
     <ol>
-      <li v-for="item in groceryList" :key="item.id">{{ item.text }}</li>
+      <GroceryListItem v-for="item in groceryList" :key="item.id" :text="item.text"/>
     </ol>
   `
 });
