@@ -15,8 +15,9 @@ export default defineComponent({
   },
   template: `
     <div>
-      <p>{{message}}</p>
+      <input v-model="message"/>
       <button @click="reverseMessage">Reverse Message</button>
+      <p>Result: {{message}}</p>
     </div>
   `
 });
